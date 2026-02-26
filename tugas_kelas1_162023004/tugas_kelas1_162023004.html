@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Diri</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .profile {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .photo-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #4d79ff;
+        }
+
+        .data p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background-color: #4d79ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2f52cc;
+        }
+
+        ul {
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        #pengalaman {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Profil Diri Mahasiswa</header>
+
+<!-- HALAMAN 1 : DATA DIRI -->
+<div class="container" id="home">
+    <h2>Data Diri</h2>
+
+    <div class="profile">
+        <img src="profil.jpeg" alt="Foto Profil" class="photo-img">
+
+        <div class="data">
+            <p><strong>Nama:</strong> Rizky Amali Sunday</p>
+            <p><strong>NRP:</strong> 162023004</p>
+            <p><strong>Alamat:</strong> Antapani,Kota Bandung</p>
+            <p><strong>Mata Kuliah:</strong> ISB-310 Sistem Informasi Berbasis Web</p>
+            <p><strong>Email:</strong> rizkysunday7@email.com</p>
+        </div>
+    </div>
+
+    <a href="#pengalaman" class="btn" onclick="showPengalaman()">
+        Lihat Pengalaman Kerja
+    </a>
+</div>
+
+<!-- HALAMAN 2 : PENGALAMAN -->
+<div class="container" id="pengalaman">
+    <h2>Pengalaman Kerja</h2>
+
+    <ul>
+        <li>Pegawai PT. Gudang Garam Indonesia – 2021</li>
+        <li>Asisten Pelatih Carlo Ancelotti – 2022</li>
+        <li>Kurir Shopee – 2022</li>
+    </ul>
+
+    <a href="#home" class="btn" onclick="showHome()">
+        Kembali ke Data Diri
+    </a>
+</div>
+
+<footer>
+    © 2026 | Tugas Pre Test Onsite
+</footer>
+
+<script>
+    function showPengalaman() {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("pengalaman").style.display = "block";
+    }
+
+    function showHome() {
+        document.getElementById("pengalaman").style.display = "none";
+        document.getElementById("home").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
